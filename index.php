@@ -8,8 +8,7 @@ require_once 'helpers/middleware.php';
 // Simple Router logic
 $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // When running with php -S localhost:8000, base path might just be /
-$basePath = '/'; 
-
+$basePath = '/db-project-main/';
 $route = str_replace($basePath, '/', $requestUri);
 $route = rtrim($route, '/');
 if (empty($route)) {
