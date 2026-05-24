@@ -3,7 +3,7 @@
 
 // Application setup
 define('APP_NAME', 'Selling.');
-define('BASE_URL', 'http://localhost:8000'); // Will run on PHP dev server
+define('BASE_URL', 'http://localhost/db-project-main');
 
 // Directories
 define('ROOT_DIR', dirname(__DIR__));
