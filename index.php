@@ -216,17 +216,13 @@ switch ($route) {
         $controller->approveSeller();
         break;
 
-    // Wishlist Routes
-    case '/wishlist':
-        require_once 'controllers/WishlistController.php';
-        $controller = new WishlistController();
-        $controller->index();
-        break;
-    case '/wishlist/toggle':
-        require_once 'controllers/WishlistController.php';
-        $controller = new WishlistController();
-        $controller->toggle();
-        break;
+    // Profile Route
+case '/profile':
+    requireLogin();
+    require_once VIEWS_DIR . '/layouts/header.php';
+    require_once VIEWS_DIR . '/user/profile.php.txt';   
+    require_once VIEWS_DIR . '/layouts/footer.php';
+    break;
 
     // Example 404
     default:
